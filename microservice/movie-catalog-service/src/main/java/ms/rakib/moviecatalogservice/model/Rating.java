@@ -1,4 +1,4 @@
-package ms.rakib.ratingsdataservice.model;
+package ms.rakib.moviecatalogservice.model;
 
 public class Rating {
 

@@ -1,4 +1,4 @@
-package ms.rakib.movieinfoservice.model;
+package ms.rakib.moviecatalogservice.model;
 
 public class Movie {
 
