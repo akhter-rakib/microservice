@@ -3,6 +3,7 @@ package ms.rakib.moviecatalogservice.resources;
 import ms.rakib.moviecatalogservice.model.CatalogItem;
 import ms.rakib.moviecatalogservice.model.Movie;
 import ms.rakib.moviecatalogservice.model.Rating;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,12 +20,11 @@ public class MovieCatalogService {
     //get all rated movie id
     //for each movie id, call movie info and get details
     //put them all together
-
+    @Autowired
+    public RestTemplate restTemplate;
 
     @RequestMapping("/{userId}")
     public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
-
-        RestTemplate restTemplate = new RestTemplate();
 
         List<Rating> ratings = Arrays.asList(
                 new Rating("1", 4),
