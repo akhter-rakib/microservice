@@ -24,6 +24,7 @@ public class RatingResource {
                 new Rating("123", 4),
                 new Rating("123", 5)
         );
+        //wrap the list into an object to protect returning list to client . why ? plz google
         UserRating userRating = new UserRating();
         userRating.setUserRating(ratingList);
         return userRating;
